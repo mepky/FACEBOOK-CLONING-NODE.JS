@@ -23,10 +23,19 @@
                                 </p>
                                 <br>
                                 <small>
-                    <%=post.user.name%>
-                        </small>
+                                        <%=post.user.name%>
+                                </small>
                             </li>
+                            <div id="comment-feed">
 
+                                <form action="/comments/create" method="POST">
+                                    <input type="text" name="content" placeholder="Comment here..">
+                                    <input type="hidden" name="post" value="<%=post._id%>">
+                                    <input type="submit" value="add Comment">
+                                </form>
+
+
+                            </div>
 
 
 
