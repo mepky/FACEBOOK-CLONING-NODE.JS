@@ -1,6 +1,6 @@
-
 <h1>
-    Codeial / <%= title %>
+    Codeial /
+    <%= title %>
 </h1>
 
 
@@ -10,4 +10,30 @@
         <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
         <input type="submit" value="Post">
     </form>
+
+    <div class="post-container">
+        <div id="list-post-container">
+            <ul>
+                <% for(post of posts){%>
+                    <li>
+                        <p>
+                            <%=post.content%>
+                        </p>
+                        <br>
+                        <small>
+                    <%=post.id%>
+                        </small>
+                    </li>
+
+
+
+
+                    <%}%>
+            </ul>
+
+
+        </div>
+
+
+    </div>
 </section>
