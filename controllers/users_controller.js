@@ -19,7 +19,7 @@ module.exports.update = function(req, res) {
             return res.redirect('back');
         })
     } else {
-        return res.status(401).send('Unauthoriezed');
+        return res.status(401).send('Unauthorized');
     }
 
 }
@@ -76,11 +76,14 @@ module.exports.create = function(req, res) {
 
 // sign in and create a session for the user
 module.exports.createSession = function(req, res) {
+    req.flash('success', 'Logged in succesfully')
     return res.redirect('/');
 }
 
 module.exports.destroySession = function(req, res) {
+
     req.logout();
+    req.flash('success', 'You are logged out');
 
     return res.redirect('/');
 }
