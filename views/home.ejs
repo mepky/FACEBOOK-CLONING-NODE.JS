@@ -13,20 +13,19 @@
         </form>
         <%}%>
 
-            <div class="post-container">
-                <div id="list-post-container">
-                    <ul>
-                        <% for(post of posts){%>
-                            <%-include('_post')-%>
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){%>
+                        <%-include('_post')-%>
 
-                                <%}%>
-                    </ul>
-
-
-                </div>
+                            <%}%>
+                </ul>
 
 
             </div>
+
+
+
 </section>
 
 <section id="user-friends">
@@ -41,3 +40,5 @@
 
         <%}%>
 </section>
+
+<script src="/js/home_posts.js"></script>
